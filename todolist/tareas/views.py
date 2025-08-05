@@ -14,7 +14,7 @@ class TaskCreate(CreateView):
     fields = ['title', 'description', 'completed']
     success_url = reverse_lazy('tasks')
 
-class TaskUptadte(UpdateView):
+class TaskUptate(UpdateView):
     model = Task
     fields = ['title', 'description', 'completed']
     success_url = reverse_lazy('tasks')
