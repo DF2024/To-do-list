@@ -15,16 +15,16 @@ class TaskCreate(CreateView):
     model = Task
     fields = ['title', 'description', 'completed']
     success_url = reverse_lazy('tasks')
-    template_name = 'task_form/task_form.html'
+    template_name = 'tareas/task_form.html'
 
 class TaskUpdate(UpdateView):
     model = Task
     fields = ['title', 'description', 'completed']
     success_url = reverse_lazy('tasks')
-    template_name = 'task_form/task_form.html'
+    template_name = 'tareas/task_form.html'
 
 class TaskDelete(DeleteView):
     model = Task
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
-    template_name = 'task_confirm_delete/task_confirm_delete.html'
+    template_name = 'tareas/task_confirm_delete.html'

@@ -1,0 +1,12 @@
+<a href="{% url 'tasks' %}">Volver</a>
+
+
+<h3>
+    ¿Estás seguro de que quieres eliminar esta tarea?
+</h3>
+<p>{{task.title}}</p>
+
+<form method="post">
+    {%csrf_token%}
+    <input type="submit" value="Si, eliminar">
+</form>

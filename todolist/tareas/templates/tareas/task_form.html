@@ -1,0 +1,11 @@
+<h1>Agregar Tareas</h1>
+
+
+<a href="{% url 'tasks' %}">Volver</a>
+
+<form method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Guardar">
+</form>

@@ -1,0 +1,27 @@
+<h1>Mi lista de tareas</h1>
+
+
+<a href="{% url 'task-create' %}">Añadir Tarea</a>
+
+{% for task in tasks %}
+
+
+    <div>
+
+        {% if task.completed %}
+            <s style="text-decoration-color: #2ca02c;">{{ task.title }}</s>
+        {% else %}
+            <span>{{ task.title }}</span>
+        {% endif %}
+        
+        <a href="{% url 'task-update' task.pk %}">Editar</a>
+
+        <a href="{% url 'task-delete' task.pk %}">Eliminar</a>
+
+
+    </div>
+{% empty %}
+
+    <h3>No hay tareas en la lista.</h3>
+
+{% endfor %}
